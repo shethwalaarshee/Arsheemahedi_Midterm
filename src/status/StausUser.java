@@ -8,12 +8,25 @@ package status;
 /**
  * june 24th
  * @author srinivsi
+ * @modifier Arsheemahedi shethwala
  */
 public class StausUser 
 {
-   public void statusDetail(String code)
+    
+    //Declaring enums for the Choice
+    public enum Choice{ZERO,ONE,TWO,THREE,DEFAULT};
+    
+    public Choice choice;
+
+    public Choice getChoice() {
+        return choice;
+    }
+    
+    
+   public void statusDetail(Choice code)
 {
-switch(code.toUpperCase())
+    
+switch(code.toString().toUpperCase())
         {
         case "ZERO": System.out.println("REJECTED");
         break;
